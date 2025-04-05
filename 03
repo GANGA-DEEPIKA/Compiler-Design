@@ -1,0 +1,98 @@
+1.
+#include <stdio.h>
+int main() 
+{
+    char c;
+    while ((c = getchar()) != EOF)
+	{
+        if (c == ' ' || c == '\n' || c == '\t') continue;
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_')
+            printf("Identifier: %c\n", c);
+        else if (c >= '0' && c <= '9')
+            printf("Constant: %c\n", c);
+        else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '=')
+            printf("Operator: %c\n", c);
+    }
+    return 0;
+}
+
+2.
+#include<stdio.h>
+int main()
+{
+	char input[]="// this is a comment";
+	char c1=input[0],c2=input[1];
+    if(c1=='/' && c2=='/')
+    {
+    	printf("comment");
+	}
+	else
+	{
+		printf("not a comment");
+	}
+	return 0;
+}
+
+6.
+#include<stdio.h>
+int main()
+{
+	char nt='A',alpha[]="a",beta[]="b";
+	printf("%c->%s%c`\n",nt,beta,nt);
+	printf("%c`->%s%c`\n",nt,alpha,nt);
+	return 0;
+}
+
+7.
+#include<stdio.h>
+int main()
+{
+	char nt='A',x='a',y1[]="b",y2[]="c";
+	printf("%c->%cx\n",nt,x);
+	printf("%c->%s|%s|&",x,y1,y2);
+	return 0;
+}
+
+8.
+#include<stdio.h>
+int main()
+{
+	char names[2][10]={"x","y"};
+	int addr[]={100,200};
+	for(int i=0;i<2;i++)
+	{
+		printf("%s->%d\n",names[i],addr[i]);
+	}
+	return 0;
+}
+
+9.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char input[50];
+printf("enter the str");
+fgets(input,sizeof(input),stdin);
+if(strcmp(input,"i eat banana")==0)
+{
+	printf("is valid");
+}
+else
+{
+	printf("valid");
+}
+	return 0;
+}
+
+12.
+#include<stdio.h>
+int main()
+{
+int a,b,c,d,op1,op2;
+scanf("%c=%c%c%c%c",&a,&b,&c,&d,&op1,&op2);
+printf("t1=%c%c%c\n",op1,c,op2);
+printf("t2=%c%ct1\n",b,op1,'t');
+printf("%c=t2\n",a);
+	return 0;
+}
